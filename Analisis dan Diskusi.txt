@@ -1,0 +1,13 @@
+ANALISIS DAN DISKUSI
+•	Bagaimana proses prediksi real-time dilakukan pada sistem ini?
+Sistem menangkap gambar dari kamera menggunakan OpenCV, kemudian gambar diproses (resize dan normalisasi) agar sesuai dengan format input model CNN. Setelah itu, model melakukan prediksi dan hasilnya ditampilkan di layar secara real-time. 
+•	Faktor apa saja yang memengaruhi keakuratan prediksi real-time?
+Akurasi dipengaruhi oleh kualitas pelatihan model, variasi data latih, dan kondisi lingkungan saat prediksi seperti pencahayaan. Model yang dilatih dengan dataset beragam cenderung memiliki performa yang lebih baik.
+•	Apa tujuan dari penerapan Night Vision pada sistem ini?
+Tujuannya adalah meningkatkan visibilitas gambar dalam kondisi pencahayaan rendah, sehingga objek tetap dapat diamati meskipun dalam lingkungan minim cahaya.
+•	Apa kelemahan dari pendekatan Night Vision yang digunakan?
+Pendekatan ini hanya mengubah tampilan visual tanpa meningkatkan kualitas gambar secara nyata. Dalam lingkungan sangat gelap atau tanpa pencahayaan sama sekali, metode ini tidak akan efektif karena tidak menggunakan sensor inframerah atau model deep learning khusus untuk low-light enhancement.
+•	Apa saja optimasi yang bisa dilakukan untuk meningkatkan performa prediksi real-time?
+Model bisa dioptimalkan dengan mengonversi ke TensorFlow Lite untuk mempercepat inferensi, terutama di perangkat dengan sumber daya terbatas seperti Raspberry Pi atau ESP32. 
+•	Apakah model dapat dilatih ulang untuk menangani kondisi pencahayaan rendah?
+Model bisa dilatih ulang dengan menambahkan data latih dari berbagai kondisi pencahayaan, termasuk gambar dalam pencahayaan rendah dan gambar hasil transformasi Night Vision. Hal ini memungkinkan model lebih robust terhadap variasi lingkungan. 
